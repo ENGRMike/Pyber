@@ -136,7 +136,7 @@ plt.show()
 ```python
 Rides_df = pd.merge(Rdata_df,Cdata_df,how ='right', on='city')
 Fare_Type = pd.DataFrame(Rides_df.groupby('type')['fare'].sum())
-Fare_Type = Total_fare.reset_index()
+Fare_Type = Fare_Type.reset_index()
 
 Cutout1 = [0.1,0.1,0]
 plt.pie(Fare_Type['fare'], explode=Cutout1, labels = Fare_Type['type'], colors = colors, autopct="%1.1f%%", shadow=True, startangle=90)
@@ -146,19 +146,7 @@ plt.show()
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-4-78327dd6623d> in <module>()
-          1 Rides_df = pd.merge(Rdata_df,Cdata_df,how ='right', on='city')
-          2 Fare_Type = pd.DataFrame(Rides_df.groupby('type')['fare'].sum())
-    ----> 3 Fare_Type = Total_fare.reset_index()
-          4 
-          5 Cutout1 = [0.1,0.1,0]
-    
-
-    NameError: name 'Total_fare' is not defined
+![png](output_3_0.png)
 
 
 
